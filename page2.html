@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI in India</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef;
+      color: #222;
+    }
+    header, footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #0056b3;
+      color: white;
+    }
+    main {
+      padding: 2rem;
+    }
+    .sound-box {
+      margin-top: 20px;
+    }
+    .btn {
+      padding: 10px;
+      background-color: green;
+      color: white;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .accordion {
+      background-color: #ccc;
+      cursor: pointer;
+      padding: 14px;
+      margin: 10px 0;
+      width: 100%;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    .accordion:hover {
+      background-color: #bbb;
+    }
+    .panel {
+      padding: 0 14px;
+      display: none;
+      background-color: #f1f1f1;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    img {
+      max-width: 100%;
+      margin-top: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Artificial Intelligence in India</h1>
+  </header>
+  <main>
+    <p>
+      India is emerging as a global AI hub, with heavy investments in AI education and startups. Government initiatives like the <strong>National AI Mission</strong> are paving the way for innovation in healthcare, agriculture, and logistics. 
+    </p>
+
+    <img src="ai-in-india.jpg" alt="AI India Initiative">
+
+    <p>
+      AI research in India is being strengthened by institutes such as IITs and IISc. Startups are building innovative solutions tailored to India's unique challenges, such as language diversity, rural connectivity, and scalable health diagnostics.
+    </p>
+
+    <p><strong>Click to hear a sound clip about AI:</strong></p>
+    <div class="sound-box">
+      <audio controls>
+        <source src="ai_sound.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <h3>Key Sectors Empowered by AI in India</h3>
+
+    <button class="accordion">Healthcare</button>
+    <div class="panel">
+      <p>AI is helping with early diagnosis, drug discovery, and real-time health monitoring. Tools like eSanjeevani are enhancing remote consultations.</p>
+    </div>
+
+    <button class="accordion">Agriculture</button>
+    <div class="panel">
+      <p>AI-driven tools are optimizing irrigation, detecting crop diseases, and increasing yield through satellite imagery and machine learning models.</p>
+    </div>
+
+    <button class="accordion">Education</button>
+    <div class="panel">
+      <p>Edtech platforms are using AI to offer personalized learning, automated assessments, and language translation for regional learners.</p>
+    </div>
+
+    <button class="accordion">Smart Governance</button>
+    <div class="panel">
+      <p>AI is enabling predictive governance, traffic optimization, smart policing, and citizen grievance redressal systems.</p>
+    </div>
+
+    <br>
+    <button class="btn" onclick="goBack()">Back to Homepage</button>
+  </main>
+  <footer>
+    <p>&copy; 2025 AI Trends Project</p>
+  </footer>
+
+  <script>
+    function goBack() {
+      window.location.href = "page.html";
+    }
+
+    // Accordion functionality
+    const accordions = document.querySelectorAll(".accordion");
+    accordions.forEach((acc) => {
+      acc.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>
