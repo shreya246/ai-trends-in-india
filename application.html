@@ -2,120 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   <title>Latest AI Applications in India</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background-color: #f0f4f8;
-      color: #333;
-    }
-
-    header {
-      background-color: #0056b3;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      background-color: #fff;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
     h2 {
-      color: #0056b3;
       margin-bottom: 1rem;
+	  }
+	  .content-wrap {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
     }
 
-    .app-section {
-      margin-bottom: 2rem;
-    }
-
-    .app-section h3 {
-      color: #004080;
-      margin-bottom: 0.4rem;
-    }
-
-    .app-section p {
-      line-height: 1.6;
-    }
-	.back-btn {
-      margin-top: 1.5rem;
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #0056b3;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    .back-btn:hover {
-      background-color: #004090;
-    }
-
-    footer {
-      background-color: #003366;
-      color: white;
+    .headline {
+      font-size: 2rem;
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      margin-bottom: 2rem;
+      color: #00796b;
+    }
+
+    .ai-entry {
+      margin-bottom: 2.5rem;
+      border-left: 5px solid #009688;
+      padding-left: 1rem;
+      transition: background-color 0.3s;
+      background-color: #ffffff;
+      padding: 1.2rem;
+      border-radius: 8px;
+    }
+
+    .ai-entry:hover {
+      background-color: #e0f2f1;
+    }
+
+    .ai-entry h3 {
+      margin-bottom: 0.6rem;
+      color: #00695c;
+    }
+
+    .ai-entry p {
+      margin: 0;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Latest AI Applications in India</h1>
-    <p>Explore cutting-edge innovations powered by artificial intelligence</p>
+	<div class="menu">
+	<div class="menu-item" onclick="goToHome()"><i class="fas fa-home"></i> Home</div>
+      <div class="menu-item" onclick="goToPage2()">Explore Indian AI Trends</div>
+	  <div class="menu-item" onclick="goToApplication()">Latest AI Applications in India</div>
+      <div class="menu-item" onclick="goToQuiz()">Take Quiz</div>
+	  <div class="menu-item" onclick="goToAbout()">About Us</div>
+    </div>
   </header>
 
-  <div class="container">
-    <h2>Recent AI-Powered Innovations</h2>
-
-    <div class="app-section">
-      <h3>1. Jugalbandi (Chatbot for Government Schemes)</h3>
+  <div class="content-wrap">
+    <div class="headline">Recent AI-Powered Innovations</div>
+    <div class="ai-entry" data-link="https://www.forbes.com/sites/saibala/2023/05/31/microsoft-has-launched-jugalbandi-a-new-generative-ai-app-for-india/">
+      <h3>1. Jugalbandi – Chatbot for Government Schemes</h3>
       <p>
-        Developed under Microsoft Research India, Jugalbandi is a chatbot that uses generative AI and WhatsApp to help citizens understand government schemes in their own language.
+        Created by Microsoft Research India, this AI chatbot helps citizens understand government schemes in their native language via WhatsApp and generative AI.
       </p>
     </div>
 
-    <div class="app-section">
-      <h3>2. Kisan AI</h3>
+    <div class="ai-entry" data-link="https://kissan.ai/">
+      <h3>2. Kisan AI – Smart Farming Assistant</h3>
       <p>
-        This AI-based mobile application provides Indian farmers with real-time insights on crop disease detection, weather predictions, and best sowing practices using image recognition and satellite data.
+        A mobile app that offers Indian farmers AI-powered crop disease detection, weather forecasting, and image-based analysis to improve yield.
       </p>
     </div>
 
-    <div class="app-section">
-      <h3>3. AI-Powered CT Scan Analyzer</h3>
+    <div class="ai-entry" data-link="https://pmc.ncbi.nlm.nih.gov/articles/PMC10177423/">
+      <h3>3. AI-Driven CT Scan Analysis</h3>
       <p>
-        Startups like Qure.ai have developed AI models that assist radiologists in detecting anomalies like COVID-19, brain hemorrhages, and tuberculosis from scans with high accuracy.
+        Companies like Qure.ai assist doctors in detecting diseases such as tuberculosis and COVID-19 through advanced AI-based image analysis.
       </p>
     </div>
 
-    <div class="app-section">
-      <h3>4. MyGov Helpdesk (ChatGPT Integration)</h3>
+    <div class="ai-entry" data-link="https://www.mygov.in/overview/">
+      <h3>4. MyGov Helpdesk + ChatGPT</h3>
       <p>
-        The Indian government has integrated ChatGPT with the MyGov WhatsApp bot, allowing citizens to ask questions and get responses in natural language, enhancing e-governance.
+        The Indian government integrated ChatGPT into the MyGov WhatsApp bot, allowing citizens to ask questions in natural language for better digital governance.
       </p>
     </div>
 
-    <div class="app-section">
-      <h3>5. Personalized Learning Tools</h3>
+    <div class="ai-entry" data-link="https://edtechhub.org/our-topic-areas/personalised-learning/">
+      <h3>5. Personalized Learning Platforms</h3>
       <p>
-        EdTech companies like BYJU'S and Embibe are leveraging AI to personalize learning paths for students by analyzing their performance data and adapting content delivery accordingly.
+        EdTech firms like BYJU’S and Embibe use AI to customize learning paths for students by analyzing performance and adapting content in real-time.
       </p>
     </div>
-<a href="page.html" class="back-btn">← Back to Home</a>
   </div>
   <footer>
     <p>&copy; 2025 AI Trends in India Project</p>
   </footer>
+  <script>
+  document.querySelectorAll('.ai-entry').forEach(entry => {
+    entry.style.cursor = 'pointer';
+    entry.addEventListener('click', function () {
+      const link = this.dataset.link;
+      if (link) {
+        window.open(link, '_blank'); // opens in a new tab
+      }
+    });
+  });
+  </script>
 </body>
 </html>

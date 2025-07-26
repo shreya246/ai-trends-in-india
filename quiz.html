@@ -3,56 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js" defer></script>
   <title>AI Trends in India - Quiz</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #eef;
-      padding: 2rem;
-      color: #222;
-    }
     h1, h2 {
       text-align: center;
     }
     .quiz-container {
-      max-width: 600px;
-      margin: auto;
-      background-color: #fff;
-      padding: 1.5rem;
+      max-width: 650px;
+      margin: 2rem auto;
+      background-color: white;
+      padding: 2rem;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
     .question {
-      margin-bottom: 20px;
+      margin-bottom: 1.5rem;
     }
+
     .question p {
-      font-weight: bold;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
     }
+
     .question label {
       display: block;
-      margin-top: 8px;
+      margin: 0.3rem 0;
     }
+    .quiz-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+    }
+
     .btn {
-      margin-top: 1rem;
       padding: 10px 20px;
-      background-color: #007BFF;
+      background-color: #008080;
       color: white;
       border: none;
-      cursor: pointer;
+      border-radius: 5px;
       font-size: 16px;
+      cursor: pointer;
+      flex: 1;
+      margin: 0 5px;
+      transition: background-color 0.3s;
     }
+
     .btn:hover {
-      background-color: #0056b3;
+      background-color: #006666;
     }
+
     .result {
       margin-top: 20px;
       font-size: 18px;
       text-align: center;
+      font-weight: bold;
+      color: #333;
     }
   </style>
 </head>
 <body>
-  <h1>Quiz: AI Trends in India</h1>
+<header>
+	<div class="menu">
+	<div class="menu-item" onclick="goToHome()"><i class="fas fa-home"></i> Home</div>
+      <div class="menu-item" onclick="goToPage2()">Explore Indian AI Trends</div>
+	  <div class="menu-item" onclick="goToApplication()">Latest AI Applications in India</div>
+      <div class="menu-item" onclick="goToQuiz()">Take Quiz</div>
+	  <div class="menu-item" onclick="goToAbout()">About Us</div>
+    </div>
+  </header>
   <div class="quiz-container">
     <form id="quizForm">
       <div class="question">
@@ -85,11 +106,14 @@
 
       <div class="quiz-buttons">
   <button type="button" class="btn" onclick="checkAnswers()">Submit Quiz</button>
-  <button type="button" class="btn" onclick="goHome()">Cancel</button>
+  <button type="button" class="btn" onclick="goToHome()">Cancel</button>
 </div>
       <div class="result" id="result"></div>
     </form>
   </div>
+  <footer>
+    <p>&copy; 2025 AI Trends in India Project</p>
+  </footer>
 
   <script>
     function checkAnswers() {
@@ -108,9 +132,6 @@
       }
       document.getElementById("result").innerText = `You scored ${score} out of 4!`;
     }
-	 function goHome() {
-    window.location.href = "page.html"; // update if your homepage has a different filename
-  }
   </script>
 </body>
 </html>

@@ -3,50 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js" defer></script>
   <title>AI Trends in India</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #eef;
-      color: #222;
-    }
-    header, footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #0056b3;
-      color: white;
-    }
-    .menu {
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
-      gap: 30px;
-    }
-
-    .menu-item {
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 16px;
-      padding: 8px 12px;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-
-    .menu-item:hover {
-      background-color: #004a99;
-    }
-    .btn {
-      padding: 10px 20px;
-      margin: 0 10px;
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    .btn:hover {
-      background-color: #0056b3;
-    }
+    
     main {
       padding: 2rem;
     }
@@ -63,11 +25,11 @@
 </head>
 <body>
   <header>
-    <h1>Current and Future AI Trends</h1>
      <div class="menu">
+	  <div class="menu-item" onclick="goToHome()"><i class="fas fa-home"></i> Home</div>
       <div class="menu-item" onclick="goToPage2()">Explore Indian AI Trends</div>
 	  <div class="menu-item" onclick="goToApplication()">Latest AI Applications in India</div>
-      <div class="menu-item" onclick="goToQuiz()">Take a Quiz</div>
+      <div class="menu-item" onclick="goToQuiz()">Take Quiz</div>
 	  <div class="menu-item" onclick="goToAbout()">About Us</div>
     </div>
   </header>
@@ -83,7 +45,7 @@
       In India, AI is being implemented in agriculture, education, and digital governance. National initiatives support innovation and research, while startups are thriving with AI-driven solutions for local problems.
     </p>
 
-    <img class="drawing" src="history-of-AI-art.jpg" alt="AI Drawing">
+    <img class="drawing" src="images/history-of-AI-art.jpg" alt="AI Drawing">
     <p>This is a drawing made using digital art software to represent AI development.</p>
 
     <h2>Watch this video to know more</h2>
@@ -93,22 +55,5 @@
   <footer>
     <p>&copy; 2025 AI Trends Project</p>
   </footer>
-
-  <script>
-    function goToPage2() {
-      window.location.href = "page2.html";
-    }
-
-    function goToQuiz() {
-      window.location.href = "quiz.html";
-    }
-	function goToAbout() {
-  window.location.href = "about-us.html";
-}
-  function goToApplication(){
-  window.location.href = "application.html";
-}
-  
-  </script>
 </body>
 </html>
