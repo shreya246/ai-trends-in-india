@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Trends in India - Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef;
+      padding: 2rem;
+      color: #222;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .quiz-container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question p {
+      font-weight: bold;
+    }
+    .question label {
+      display: block;
+      margin-top: 8px;
+    }
+    .btn {
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quiz: AI Trends in India</h1>
+  <div class="quiz-container">
+    <form id="quizForm">
+      <div class="question">
+        <p>1. Which sector in India is using AI for crop monitoring and irrigation?</p>
+        <label><input type="radio" name="q1" value="Education"> Education</label>
+        <label><input type="radio" name="q1" value="Agriculture"> Agriculture</label>
+        <label><input type="radio" name="q1" value="Finance"> Finance</label>
+      </div>
+
+      <div class="question">
+        <p>2. What platform is used in India for AI-based remote medical consultations?</p>
+        <label><input type="radio" name="q2" value="eSanjeevani"> eSanjeevani</label>
+        <label><input type="radio" name="q2" value="Aarogya Setu"> Aarogya Setu</label>
+        <label><input type="radio" name="q2" value="Digilocker"> Digilocker</label>
+      </div>
+
+      <div class="question">
+        <p>3. Which of these is a benefit of using AI in education?</p>
+        <label><input type="radio" name="q3" value="Automated Learning"> Automated Learning</label>
+        <label><input type="radio" name="q3" value="Personalized Learning"> Personalized Learning</label>
+        <label><input type="radio" name="q3" value="Uniform Curriculum"> Uniform Curriculum</label>
+      </div>
+
+      <div class="question">
+        <p>4. What is the aim of India’s National AI Mission?</p>
+        <label><input type="radio" name="q4" value="Replace human jobs"> Replace human jobs</label>
+        <label><input type="radio" name="q4" value="Promote AI research and innovation"> Promote AI research and innovation</label>
+        <label><input type="radio" name="q4" value="Ban AI"> Ban AI</label>
+      </div>
+
+      <div class="quiz-buttons">
+  <button type="button" class="btn" onclick="checkAnswers()">Submit Quiz</button>
+  <button type="button" class="btn" onclick="goHome()">Cancel</button>
+</div>
+      <div class="result" id="result"></div>
+    </form>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: "Agriculture",
+        q2: "eSanjeevani",
+        q3: "Personalized Learning",
+        q4: "Promote AI research and innovation"
+      };
+      let score = 0;
+      for (let q in answers) {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        if (selected && selected.value === answers[q]) {
+          score++;
+        }
+      }
+      document.getElementById("result").innerText = `You scored ${score} out of 4!`;
+    }
+	 function goHome() {
+    window.location.href = "page.html"; // update if your homepage has a different filename
+  }
+  </script>
+</body>
+</html>
